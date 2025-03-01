@@ -749,7 +749,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$dotenv$2f$li
 ;
 ;
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$dotenv$2f$lib$2f$main$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["config"])();
-const ELEVENLABS_API_KEY = ("TURBOPACK compile-time value", "sk_14089ad2623c5f8f2f3435f98eebbfe56d88cd57ac14f53d");
+const ELEVENLABS_API_KEY = process.env.NEXT_PUBLIC_ELEVENLABS_API_KEY;
 const VOICE_ID = '29vD33N1CtxCmqQRPOHJ';
 function Main() {
     const [transcript, setTranscript] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
