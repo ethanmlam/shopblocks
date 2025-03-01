@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+ShopBlocks: The Web3 Shopping Companion
+Voice-Activated | Crypto-Native | AI-Powered
 
-## Getting Started
+ShopBlocks  is a Web3-native, AI-driven shopping agent built on the CDP onchain kit that enables seamless, voice-first e-commerce with multi-currency checkout—including ETH payments. Whether you're a seasoned crypto user or new to decentralized finance, ShopBlocks bridges traditional and blockchain-based commerce, making shopping effortless and verifiable on-chain.
 
-First, run the development server:
+🚀 Core Features
+🗣️ Voice-Powered Shopping
+AI-Driven Requests: Just say, "Find me tennis balls," and Shopblocks finds, verifies, and adds them to your cart.
+ElevenLabs Integration: Audio responses provide a fully hands-free experience, ideal for accessibility.
+✅ ASIN Validation (No Hallucinated Products)
+On-Chain & API Verification: Real-time ASIN retrieval ensures that every listed product is legit.
+External API Calls: Direct validation against Amazon to eliminate false listings.
+🔍 RAG Pipeline (Web3-Optimized AI Search)
+Exa AI + OpenAI: Retrieval-Augmented Generation (RAG) ensures precise, relevant product listings.
+Perplexity (Optional): Alternative LLM-powered search for an extra layer of verification.
+💳 Multi-Currency, Web3-Enabled Checkout
+ETH & USD Payments: Choose to pay with fiat or seamlessly transact via RainbowKit + Wagmi.
+EigenLayer AVS Integration: Uses a decentralized oracle (eoracle) to fetch real-time ETH–USD price data.
+🛠 Getting Started
+Clone & Install
+bash
+Copy
+Edit
+git clone https://github.com/<your-repo>/vshop-ai.git
+cd vshop-ai
+npm install
+Set Up Environment
+Create a .env.local file with your API keys:
 
-```bash
+plaintext
+Copy
+Edit
+OPENAI_API_KEY=
+PERPLEXITY_API_KEY=
+EXA_API_KEY=
+RYE_BASIC_PROD=
+RYE_BASIC_PAY=
+NEXT_PUBLIC_ELEVENLABS_API_KEY=
+These keys power AI-driven product parsing, on-chain data verification, and multi-currency transactions.
+
+Run Development Server
+bash
+Copy
+Edit
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Open http://localhost:3000
+🌐 About VShop AI
+Web3-native e-commerce agent
+Crypto-first checkout with ETH support
+AI-powered product discovery & validation
+Future-proofed with decentralized oracles
