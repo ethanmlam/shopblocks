@@ -9,7 +9,7 @@ import { Loader2 } from "lucide-react";
 
 const navigation = [
   { href: "/", label: "Home" },
-  { href: "https://github.com/vsvaidya27/VShop-AI", label: "About" },
+  { href: "https://github.com/ethanlam/shopblocks", label: "About" },
 ];
 
 const linkClasses = "text-foreground transition-colors hover:text-foreground";
@@ -63,7 +63,7 @@ export function NavigationHeader() {
     <div className="sticky top-0 flex h-16 items-center justify-between border-b bg-background px-4 md:px-6 z-50">
       <nav className="flex items-center gap-6 text-lg font-medium md:gap-5 md:text-sm lg:gap-6">
         <Link href="/" className="flex items-center gap-2 text-lg font-semibold md:text-base">
-          <span>VShop AI</span>
+          <span className="text-purple-400">ShopBlocks</span>
         </Link>
         {navigation.map((link) => (
           <Button key={link.href} variant="link" className={cn(linkClasses, "p-0")}>
@@ -78,7 +78,7 @@ export function NavigationHeader() {
           <div className="text-sm font-medium">
             1 ETH = ${priceFeed.price.toFixed(2)} USD
             <div className="text-gray-400 text-sm text-center">
-              Data provided by <a href="https://eoracle.io" className="text-blue-400 underline">eoracle.io</a> AVS
+              Data provided by <a href="https://eoracle.io" className="text-purple-400 underline">eoracle.io</a> AVS
             </div>
           </div>
         )}

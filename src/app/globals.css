@@ -19,30 +19,78 @@
     --border: 220 20% 30%;
     --input: 220 20% 30%;
 
-    --primary: 142 70% 45%;
+    --primary: 270 70% 60%;
     --primary-foreground: 220 10% 95%;
 
     --secondary: 220 30% 25%;
     --secondary-foreground: 220 10% 95%;
 
-    --accent: 220 50% 30%;
+    --accent: 250 50% 50%;
     --accent-foreground: 220 10% 95%;
 
     --destructive: 0 60% 50%;
     --destructive-foreground: 220 10% 95%;
 
-    --ring: 142 70% 45%;
+    --ring: 270 70% 60%;
 
     --radius: 0.5rem;
+    
+    /* OnchainKit Custom Variables */
+    --ock-font-family: 'Inter, sans-serif';
+    --ock-border-radius: '0.5rem';
+    --ock-border-radius-inner: '0.3rem';
+    --ock-text-inverse: 'hsl(220 10% 95%)';
+    --ock-text-foreground: 'hsl(220 10% 95%)';
+    --ock-text-foreground-muted: 'hsl(220 10% 70%)';
+    --ock-text-error: 'hsl(0 60% 50%)';
+    --ock-text-primary: 'hsl(270 70% 60%)';
+    --ock-text-success: 'hsl(270 70% 60%)';
+    --ock-text-warning: 'hsl(38 92% 50%)';
+    --ock-text-disabled: 'hsl(220 10% 60%)';
+ 
+    --ock-bg-default: 'hsl(240 23% 19%)';
+    --ock-bg-default-hover: 'hsl(240 23% 24%)';
+    --ock-bg-default-active: 'hsl(240 23% 15%)';
+    --ock-bg-alternate: 'hsl(220 25% 15%)';
+    --ock-bg-alternate-hover: 'hsl(220 25% 20%)';
+    --ock-bg-alternate-active: 'hsl(220 25% 10%)';
+    --ock-bg-inverse: 'hsl(220 10% 95%)';
+    --ock-bg-inverse-hover: 'hsl(220 10% 90%)';
+    --ock-bg-inverse-active: 'hsl(220 10% 85%)';
+    --ock-bg-primary: 'hsl(270 70% 60%)';
+    --ock-bg-primary-hover: 'hsl(270 70% 65%)';
+    --ock-bg-primary-active: 'hsl(270 70% 55%)';
+    --ock-bg-primary-washed: 'hsla(270, 70%, 60%, 0.2)';
+    --ock-bg-primary-disabled: 'hsla(270, 70%, 60%, 0.5)';
+    --ock-bg-secondary: 'hsl(220 30% 25%)';
+    --ock-bg-secondary-hover: 'hsl(220 30% 30%)';
+    --ock-bg-secondary-active: 'hsl(220 30% 20%)';
+    --ock-bg-error: 'hsl(0 60% 50%)';
+    --ock-bg-warning: 'hsl(38 92% 50%)';
+    --ock-bg-success: 'hsl(270 70% 60%)';
+    --ock-bg-default-reverse: 'hsl(220 10% 95%)';
+ 
+    --ock-icon-color-primary: 'hsl(270 70% 60%)';
+    --ock-icon-color-foreground: 'hsl(220 10% 95%)';
+    --ock-icon-color-foreground-muted: 'hsl(220 10% 70%)';
+    --ock-icon-color-inverse: 'hsl(240 23% 19%)';
+    --ock-icon-color-error: 'hsl(0 60% 50%)';
+    --ock-icon-color-success: 'hsl(270 70% 60%)';
+    --ock-icon-color-warning: 'hsl(38 92% 50%)';
+ 
+    --ock-line-primary: 'hsl(270 70% 60%)';
+    --ock-line-default: 'hsl(220 20% 30%)';
+    --ock-line-heavy: 'hsl(220 20% 40%)';
+    --ock-line-inverse: 'hsl(220 10% 95%)';
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-[hsl(var(--border))];
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))];
   }
 }
 

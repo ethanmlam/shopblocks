@@ -350,17 +350,17 @@ export default function Main() {
 
   const PurchaseConfirmation = ({ item }: { item: any }) => {
     return (
-      <Card className="max-w-2xl mx-auto bg-gray-800 text-white shadow-lg border-green-500">
+      <Card className="max-w-2xl mx-auto bg-gray-800 text-white shadow-lg border-purple-500">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-green-400">
-            <Check className="text-green-500" />
+          <CardTitle className="flex items-center gap-2 text-purple-400">
+            <Check className="text-purple-500" />
             Purchase Successful
           </CardTitle>
         </CardHeader>
         <CardContent>
           <p className="mb-4">Your item has been successfully purchased and will be arriving at your address soon.</p>
           <div className="bg-gray-700 p-4 rounded-lg mb-4">
-            <h3 className="font-semibold mb-2 text-green-400">Purchase Details:</h3>
+            <h3 className="font-semibold mb-2 text-purple-400">Purchase Details:</h3>
             <p>Item: {item?.title || "Item details not available."}</p>
             <p>Total Cost: {item?.price?.displayValue || "Cost not available."}</p>
             <Image
@@ -371,7 +371,7 @@ export default function Main() {
               height={300}
             />
           </div>
-          <Button onClick={handlePlaceAnotherOrder} className="w-full bg-green-500 hover:bg-green-600 text-white">
+          <Button onClick={handlePlaceAnotherOrder} className="w-full bg-purple-500 hover:bg-purple-600 text-white">
             Place Another Order
           </Button>
         </CardContent>
@@ -396,9 +396,9 @@ export default function Main() {
               }
 
               return (
-                  <Card key={product.ASIN} className="flex flex-col h-full bg-gray-800 text-white shadow-lg border-green-500">
+                  <Card key={product.ASIN} className="flex flex-col h-full bg-gray-800 text-white shadow-lg border-purple-500">
                     <CardHeader className="flex-none">
-                      <CardTitle className="line-clamp-2 h-12 text-green-400">{product.title}</CardTitle>
+                      <CardTitle className="line-clamp-2 h-12 text-purple-400">{product.title}</CardTitle>
                     </CardHeader>
                     <CardContent className="flex-1 flex flex-col">
                       <div className="flex-none">
@@ -411,18 +411,18 @@ export default function Main() {
                         />
                       </div>
                       <p className="text-sm text-gray-300 mt-2 line-clamp-2 flex-1">{product.description}</p>
-                      <p className="text-lg text-green-400 mt-2">Price: {product.price.displayValue}</p>
+                      <p className="text-lg text-purple-400 mt-2">Price: {product.price.displayValue}</p>
                       <div className="flex justify-between mt-4">
                         <div className="flex justify-between w-full">
                           <Button
-                            className="w-[48%] bg-green-500 hover:bg-green-600 text-white"
+                            className="w-[48%] bg-purple-500 hover:bg-purple-600 text-white"
                             onClick={() => handleBuyNow(product.ASIN || product.id)}
                           >
                             <DollarSign className="mr-2 h-4 w-4" />
                             Buy USD
                           </Button>
                           <Button
-                            className="w-[48%] bg-blue-500 hover:bg-blue-600 text-white"
+                            className="w-[48%] bg-indigo-500 hover:bg-indigo-600 text-white"
                             onClick={() => handleBuyETH([product])}
                           >
                             <ShoppingCart className="mr-2 h-4 w-4" />
@@ -443,9 +443,9 @@ export default function Main() {
   return (
     <main className="container mx-auto p-4 text-white min-h-screen">
       <div className="flex justify-start items-center w-1/2">
-        <h1 className="text-4xl font-bold mb-8 text-left text-green-400">
-          <DollarSign className="inline-block mr-2 text-green-500" />
-          The AI-Powered Smart Shopping Assistant
+        <h1 className="text-4xl font-bold mb-8 text-left text-purple-400">
+          <DollarSign className="inline-block mr-2 text-purple-500" />
+          ShopBlocks: Blockchain Shopping Assistant
         </h1>
       </div>
       {purchasedItem ? (
@@ -453,9 +453,9 @@ export default function Main() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <Card className="mb-8 bg-gray-800 shadow-lg border-green-500">
+            <Card className="mb-8 bg-gray-800 shadow-lg border-purple-500">
               <CardHeader>
-                <CardTitle className="text-green-400">Voice Assistant</CardTitle>
+                <CardTitle className="text-purple-400">Voice Assistant</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex justify-center mb-4">
@@ -463,17 +463,17 @@ export default function Main() {
                     onClick={isRecording ? () => {} : startRecording}
                     disabled={isRecording}
                     size="lg"
-                    className={`w-16 h-16 rounded-full ${isRecording ? "bg-red-500 hover:bg-red-600" : "bg-green-500 hover:bg-green-600"}`}
+                    className={`w-16 h-16 rounded-full ${isRecording ? "bg-red-500 hover:bg-red-600" : "bg-purple-500 hover:bg-purple-600"}`}
                   >
                     {isRecording ? <StopCircle className="h-6 w-6" /> : <Mic className="h-6 w-6" />}
                   </Button>
                 </div>
                 <Card className="mb-4 bg-gray-700">
                   <CardHeader>
-                    <CardTitle className="flex items-center text-green-400">
+                    <CardTitle className="flex items-center text-purple-400">
                       <span className="mr-2">Transcript</span>
                       {transcript && (
-                        <Badge variant="secondary" className="bg-green-200 text-green-700">
+                        <Badge variant="secondary" className="bg-purple-200 text-purple-700">
                           Recorded
                         </Badge>
                       )}
@@ -489,7 +489,7 @@ export default function Main() {
                   onClick={processTranscript}
                   disabled={!transcript || isProcessing}
                   size="lg"
-                  className="w-full bg-blue-500 hover:bg-blue-600"
+                  className="w-full bg-indigo-500 hover:bg-indigo-600"
                 >
                   {isProcessing ? (
                     <>
@@ -503,9 +503,9 @@ export default function Main() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-800 shadow-lg border-green-500">
+            <Card className="bg-gray-800 shadow-lg border-purple-500">
               <CardHeader>
-                <CardTitle className="text-green-400">Chat with AI Shopping Assistant</CardTitle>
+                <CardTitle className="text-purple-400">Chat with ShopBlocks Assistant</CardTitle>
               </CardHeader>
               <CardContent>
                 <ScrollArea className="h-[300px] w-full rounded-md border border-gray-600 p-4 bg-gray-700">
@@ -514,33 +514,33 @@ export default function Main() {
                       <div key={index} className={`mb-4 ${msg.role === "user" ? "text-right" : "text-left"}`}>
                         <Badge
                           variant={msg.role === "user" ? "secondary" : "default"}
-                          className={`mb-2 ${msg.role === "user" ? "bg-blue-200 text-blue-700" : "bg-green-200 text-green-700"}`}
+                          className={`mb-2 ${msg.role === "user" ? "bg-indigo-200 text-indigo-700" : "bg-purple-200 text-purple-700"}`}
                         >
                           {msg.role === "user" ? "You" : "AI"}
                         </Badge>
                         <p
-                          className={`p-3 rounded-lg inline-block max-w-[80%] shadow-sm ${msg.role === "user" ? "bg-blue-900" : "bg-green-900"}`}
+                          className={`p-3 rounded-lg inline-block max-w-[80%] shadow-sm ${msg.role === "user" ? "bg-indigo-900" : "bg-purple-900"}`}
                         >
                           {msg.content}
                         </p>
                       </div>
                     ))
                   ) : (
-                    <p className="text-center text-gray-400">Start the conversation with the AI shopping assistant!</p>
+                    <p className="text-center text-gray-400">Start the conversation with the ShopBlocks assistant!</p>
                   )}
                 </ScrollArea>
                 <div className="flex mt-4">
                   <input
                     type="text"
                     placeholder="Type your message..."
-                    className="flex-grow p-2 border border-gray-600 rounded-l-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-gray-700 text-white"
+                    className="flex-grow p-2 border border-gray-600 rounded-l-md focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700 text-white"
                     value={transcript}
                     onChange={(e) => setTranscript(e.target.value)}
                   />
                   <Button
                     onClick={processTranscript}
                     disabled={!transcript || isProcessing}
-                    className="rounded-l-none bg-green-500 hover:bg-green-600 h-10.5"
+                    className="rounded-l-none bg-purple-500 hover:bg-purple-600 h-10.5"
                   >
                     <Send className="h-4 w-4 mr-2" />
                     Send
@@ -561,7 +561,7 @@ export default function Main() {
             {recommendations && (
               <div className="mt--2 flex justify-end">
                 <div className="w-full">
-                  {/* <h2 className="text-3xl font-bold mb-4 mt--12 text-center text-green-400">Product Recommendations</h2> */}
+                  {/* <h2 className="text-3xl font-bold mb-4 mt--12 text-center text-purple-400">Product Recommendations</h2> */}
                   <ProductRecommendations recommendations={recommendations} />
                 </div>
               </div>

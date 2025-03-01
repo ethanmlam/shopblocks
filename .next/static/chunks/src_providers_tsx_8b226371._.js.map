@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/ethanlam/Repos/shopblocks/src/providers.tsx"],"sourcesContent":["'use client';\n \nimport type { ReactNode } from 'react';\nimport { OnchainKitProvider } from '@coinbase/onchainkit';\nimport { base } from 'wagmi/chains'; // add baseSepolia for testing \n \nexport function Providers(props: { children: ReactNode }) {\n  return (\n    <OnchainKitProvider\n      apiKey={process.env.NEXT_PUBLIC_ONCHAINKIT_API_KEY} \n      chain={base} // add baseSepolia for testing \n    >\n      {props.children}\n    </OnchainKitProvider>\n  );\n}"],"names":[],"mappings":";;;AASc;;AANd;AAAA;AACA,yRAAqC,+BAA+B;AAJpE;;;;AAMO,SAAS,UAAU,KAA8B;IACtD,qBACE,6LAAC,wKAAA,CAAA,qBAAkB;QACjB,MAAM;QACN,OAAO,gKAAA,CAAA,OAAI;kBAEV,MAAM,QAAQ;;;;;;AAGrB;KATgB","debugId":null}},
+    {"offset": {"line": 36, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
