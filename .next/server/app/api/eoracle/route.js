@@ -1,0 +1,12 @@
+const CHUNK_PUBLIC_PATH = "server/app/api/eoracle/route.js";
+const runtime = require("../../../chunks/[turbopack]_runtime.js");
+runtime.loadChunk("server/chunks/node_modules_next_65140a15._.js");
+runtime.loadChunk("server/chunks/node_modules_ethers_lib_esm_abi_cd1b1cd6._.js");
+runtime.loadChunk("server/chunks/node_modules_ethers_lib_esm_providers_b51e6675._.js");
+runtime.loadChunk("server/chunks/node_modules_ethers_lib_esm_15c8ca4d._.js");
+runtime.loadChunk("server/chunks/node_modules_@noble_curves_esm_8d831ba4._.js");
+runtime.loadChunk("server/chunks/node_modules_311d75ec._.js");
+runtime.loadChunk("server/chunks/[root of the server]__8112d4d8._.js");
+runtime.getOrInstantiateRuntimeModule("[project]/.next-internal/server/app/api/eoracle/route/actions.js [app-rsc] (server actions loader, ecmascript)", CHUNK_PUBLIC_PATH);
+runtime.getOrInstantiateRuntimeModule("[project]/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/src/app/api/eoracle/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)", CHUNK_PUBLIC_PATH);
+module.exports = runtime.getOrInstantiateRuntimeModule("[project]/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/src/app/api/eoracle/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)", CHUNK_PUBLIC_PATH).exports;

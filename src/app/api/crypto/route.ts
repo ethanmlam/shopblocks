@@ -7,8 +7,8 @@ export async function POST(request: Request) {
     if (request.method === 'POST') {
       const { product } = await request.json();
   
-      if (!product || !Array.isArray(product) || product.length === 0) {
-        return NextResponse.json({ message: 'Valid product data array is required.' }, { status: 400 });
+      if (!product) {
+        return NextResponse.json({ message: 'Product data is required.' }, { status: 400 });
       }
   
       try {
@@ -18,12 +18,7 @@ export async function POST(request: Request) {
         const ethPrice = data.ethereum.usd;
   
         // 2) Sum up all the numeric prices from the array
-        const amountInUSD = product.reduce((total: number, item: { price: number }) => {
-          if (!item || typeof item.price !== 'number') {
-            throw new Error('Invalid product price format');
-          }
-          return total + item.price;
-        }, 0);
+        const amountInUSD = product.reduce((total: number, item: { price: number }) => total + item.price, 0);
   
         // 3) Validate
         if (isNaN(amountInUSD) || isNaN(ethPrice) || ethPrice <= 0) {
