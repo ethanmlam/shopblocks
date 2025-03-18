@@ -1,6 +1,6 @@
 # **Shopblocks: The Web3 Shopping Companion and TreeHacks**  
 **Voice-Activated | Crypto-Native | AI-Powered**  
-
+https://youtu.be/CEn44Jo6Pmc
 Built on CDP Onchain kit, Shopblocks is a **Web3-native, AI-driven shopping agent** that enables seamless, **voice-first** e-commerce with **multi-currency checkout**—including **ETH payments**. Whether you're a seasoned crypto user or new to decentralized finance, Shopblocks bridges traditional and blockchain-based commerce, making shopping effortless and verifiable on-chain.  
 
 ---
