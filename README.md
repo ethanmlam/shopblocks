@@ -26,7 +26,10 @@ Built on CDP Onchain kit, Shopblocks is a **Web3-native, AI-driven shopping agen
 ---
 
 ## **🛠 Getting Started**  
-
+- ElevenLabs API key
+- Exa.ai API key
+- Openai API key
+  
 ### **Clone & Install**  
 ```bash
 git clone https://github.com/<your-repo>/shopblocks.git
